@@ -7,19 +7,29 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email && password) {
-      // Temporary logic (add real backend later)
-      if (email.includes("owner")) {
-        navigate("/owner/dashboard");
-      } else {
-        navigate("/employee/dashboard");
-      }
-    } else {
-      alert("Please fill out both fields.");
-    }
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const credentials = {
+    owner: { email: "owner@bizzflow.com", password: "Own@123" },
+    employee: { email: "employee1@bizzflow.com", password: "Emp@123" },
   };
+
+  if (
+    email === credentials.owner.email &&
+    password === credentials.owner.password
+  ) {
+    navigate("/owner/dashboard");
+  } else if (
+    email === credentials.employee.email &&
+    password === credentials.employee.password
+  ) {
+    navigate("/employee/dashboard");
+  } else {
+    alert("Invalid email or password.");
+  }
+};
+
 
   return (
     <div className="login-container">

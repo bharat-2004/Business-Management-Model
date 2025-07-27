@@ -1,18 +1,30 @@
-# Business Management System (BMM) – React + Vite
+# BizzFlow – Business Management System (React + Vite)
 
-A role-based Business Management Web App built using React and Vite.  
-This app includes separate dashboards for **Owners** and **Employees**, each with unique UI and features to manage daily business operations efficiently.
+BizzFlow is a modern, role-based business management system built using React and Vite.  
+It features a unified login system for Owners and Employees, each with their own personalized dashboard and controls.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 Role-based redirection (Owner / Employee)
-- 👑 Owner Dashboard with cards, charts, and detailed business insights
-- 👷 Employee Dashboard with tasks, shifts, attendance, and announcements
-- 🧭 Sidebar + Navbar layout for both roles
-- 🎨 Responsive, clean and professional UI
-- ⚡ Fast builds and dev environment via Vite
+- 🔐 Secure role-based login (Owner & Employee)
+- 👑 Owner Dashboard: Business metrics, inventory, revenue, alerts
+- 👷 Employee Dashboard: Tasks, shifts, attendance, announcements
+- 🎨 Clean, responsive UI for both roles
+- ⚡ Built using React + Vite for lightning-fast performance
+
+---
+
+## 🔑 Valid Login Credentials
+
+Use the following credentials on the login page:
+
+| Role     | Email                    | Password   |
+|----------|--------------------------|------------|
+| Owner    | `owner@bizzflow.com`     | `Own@123`  |
+| Employee | `employee1@bizzflow.com` | `Emp@123`  |
+
+> These are demo accounts for testing role-based access and redirection.
 
 ---
 
@@ -21,26 +33,24 @@ This app includes separate dashboards for **Owners** and **Employees**, each wit
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/)
-- npm (comes with Node)
+- npm (comes bundled with Node.js)
 
 ---
 
 ### 📦 Installation
 
 ```bash
-git clone https://github.com/bharat-2004/Business-Management-Model.git
+git clone https://github.com/bharat-2004/business-management-system.git
 cd business-management-system
 npm install
 npm run dev
 ```
 
-After starting, open in your browser:
+Once the dev server starts, visit:
 
-👉 **Owner Dashboard:**  
-[http://localhost:5173/owner/dashboard](http://localhost:5173/owner/dashboard)
+👉 **Login Page:** [http://localhost:5173](http://localhost:5173)
 
-👉 **Employee Dashboard:**  
-[http://localhost:5173/employee/dashboard](http://localhost:5173/employee/dashboard)
+Login with the above credentials and you'll be redirected automatically to the appropriate dashboard based on your role.
 
 ---
 
@@ -49,49 +59,36 @@ After starting, open in your browser:
 ```
 src/
   components/
-    Navbar.jsx
-    Sidebar.jsx
-    ProtectedRoute.jsx
+  context/
   pages/
     login/
-      Login.jsx
     owner/
-      Dashboard.jsx
-      Inventory.jsx
-      Revenue.jsx
-      Alerts.jsx
     employee/
-      Dashboard.jsx
-      Tasks.jsx
-      ShiftInfo.jsx
-      Announcements.jsx
-      Attendance.jsx
-  context/
-    AuthContext.jsx
   App.jsx
   main.jsx
 ```
 
 ---
 
-## 🧑‍💼 Usage
+## 🧠 How It Works
 
-1. Run `npm run dev`
-2. Go to login page → Select **Owner** or **Employee**
-3. Get redirected to your respective dashboard
-4. Use sidebar to navigate different sections
+- User logs in via the login page using role-specific credentials
+- App checks the email & password combination
+- If valid, redirects user to `/owner/dashboard` or `/employee/dashboard`
+- Unauthorized login attempts show an error
 
 ---
 
-## 🛠️ Built With
+## 🛠️ Tech Stack
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [React Router DOM](https://reactrouter.com/)
-- Context API
+- React + Vite
+- React Router DOM
+- Context API (optional future upgrade)
+- Pure CSS styling
 
 ---
 
 ## 📜 License
 
-MIT – Use freely with credit.
+MIT – Free to use and modify with credit.
+
