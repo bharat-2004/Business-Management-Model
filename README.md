@@ -48,7 +48,7 @@ npm run dev
 
 Once the dev server starts, visit:
 
-👉 **Login Page:** [http://localhost:5173](http://localhost:5173)
+👉 **App Link:** https://business-management-model.vercel.app
 
 Login with the above credentials and you'll be redirected automatically to the appropriate dashboard based on your role.
 
